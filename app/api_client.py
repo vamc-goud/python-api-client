@@ -5,7 +5,11 @@ from .config import BASE_URL, REQUEST_TIMEOUT
 
 def get_todo(todo_id):
 
-    if not isinstance(todo_id, int) or todo_id <= 0:
+    if (
+        isinstance(todo_id, bool)
+        or not isinstance(todo_id, int)
+        or todo_id <= 0
+    ):
         raise ValueError("Todo ID must be a positive integer")
 
     url = f"{BASE_URL}/todos/{todo_id}"
