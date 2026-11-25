@@ -30,3 +30,18 @@ python -m pip install -r requirements.txt
 ## Run
 
 python -m app.main
+
+## Testing
+
+Run all automated tests using:
+
+python -m unittest discover -v
+
+The test suite checks:
+
+- Successful API responses
+- Invalid task IDs
+- API timeouts
+- HTTP errors
+- Invalid JSON
+- Unexpected response formats
